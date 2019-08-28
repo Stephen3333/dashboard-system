@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	theme: "light1", // "light2", "dark1", "dark2"
+	animationEnabled: false, // change to true		
+	title:{
+		text: "Basic Column Chart"
+	},
+	data: [
+	{
+		// Change type to "bar", "area", "spline", "pie",etc.
+		type: "column",
+		dataPoints: [
+			{ label: "users",  y: 10  },
+			{ label: "successful transactions", y: 15  },
+			{ label: "devices connected", y: 25  },
+			{ label: "accounts opened",  y: 30  },
+			{ label: "failed transactions",  y: 28  }
+		]
+	}
+	]
+});
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+	theme: "light2",
+	title:{
+		text: "Transactions over the past five days"
+	},
+	axisY:{
+		includeZero: false
+	},
+	data: [{        
+		type: "line",       
+		dataPoints: [
+			{ y: 0 },
+			{ y: 450 },
+			{ y: 414},
+			{ y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle" },
+			{ y: 460 },
+			{ y: 450 },
+			//{ y: 500 },
+			//{ y: 480 },
+			//{ y: 480 },
+			//{ y: 410 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+			//{ y: 500 },
+			//{ y: 480 },
+			//{ y: 510 }
+		]
+	}]
+});
+var chart3 = new CanvasJS.Chart("chartContainer3", {
+	animationEnabled: true,
+	title:{
+		text: "Account information",
+		horizontalAlign: "center"
+	},
+	data: [{
+		type: "doughnut",
+		startAngle: 60,
+		//innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{label} - #percent%",
+		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+		dataPoints: [
+			{ y: 67, label: "successful Transactions" },
+			{ y: 28, label: "Failed transactions" },
+			{ y: 10, label: "Accounts opened" },
+			{ y: 7, label: "Devices connected"},
+			{ y: 15, label: "number of users"},
+			//{ y: 6, label: "Spam"}
+		]
+	}]
+});
+
+chart.render();
+
+chart2.render();
+
+chart3.render();
+
+}
+</script>
+<!--<script type="text/javascript">
+
+
+window.onload = function () {
+
+
+
+}
+</script>-->
+</head>
+<body>
+<div id="chartContainer" style="height: 370px; width: 600px; float:left "></div>
+<div id="chartContainer2" style="height: 370px; width: 600px"></div>
+<br/>
+<br/>
+<div id="chartContainer3" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+</body>
+</html>

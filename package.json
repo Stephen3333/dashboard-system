@@ -1,0 +1,21 @@
+{
+  "name": "dashboard-system",
+  "version": "1.0.0",
+  "description": "dashboard management system",
+  "main": "login.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "sql-template-strings": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dashboard",
+    "login"
+  ],
+  "author": "Stephen Kimani",
+  "license": "ISC"
+}

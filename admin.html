@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Admin Console
+        </title>
+        <style>
+        body {
+  background-color: #282c34;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+
+
+        </style>
+    </head>
+    <body>
+        Hi Admin
+        <br>
+        <br>
+		<form action= "/getAllUsers" method="get">
+        <button type="submit" formmethod="get">see all users</button>
+    </form>
+    <br>
+    <form method="get" action="/addUser">
+        <button type="submit" formmethod="get">Add user   </button>
+    </form> 
+<br>
+    <form method="get" action="/Updateuser">
+        <button type="submit" formmethod="get">update user</button>
+    </form> 
+<br>
+
+    <form method="get" action="/Deleteuser">
+        <button type="submit" formmethod="get">delete user</button>
+    </form> 
+       <br>
+		
+		<form action= "/dashboard" method="get">
+        <button type="submit" formmethod="get">View charts</button>
+    </form>
+    <br>
+    <form>
+        <input type="button" value="back" onclick="history.back()">
+      </form>
+          
+    </body>
+
+</html>
